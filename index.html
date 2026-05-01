@@ -2,15 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My App</title>
+  <title>My Edge App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      margin-top: 20px;
+      white-space: pre-wrap;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>My Edge App</h1>
 
-  <button id="load">Load Content</button>
+  <h1>API Test Frontend</h1>
 
-  <pre id="output"></pre>
+  <input id="apiKey" placeholder="Enter API Key (e.g. test-key)" />
+
+  <button id="loadBtn">Load Content</button>
+
+  <pre id="output">Waiting...</pre>
 
   <script src="script.js"></script>
+
 </body>
 </html>
