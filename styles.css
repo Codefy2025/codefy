@@ -1,0 +1,77 @@
+/* 🌍 Base reset */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f9f9f9;
+  color: #222;
+}
+
+/* 📦 Page container */
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* 🧭 Navigation */
+nav {
+  margin-bottom: 30px;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #0070f3;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* 🧱 Title */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* 📝 Content typography */
+#content {
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* Paragraph spacing */
+#content p {
+  margin-bottom: 16px;
+}
+
+/* Headings */
+#content h1 {
+  font-size: 2rem;
+  margin-top: 30px;
+}
+
+#content h2 {
+  font-size: 1.5rem;
+  margin-top: 25px;
+}
+
+/* Lists */
+#content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Images */
+img {
+  border-radius: 8px;
+  margin: 20px 0;
+  display: block;
+  max-width: 100%;
+}
+
+/* 🧊 Optional: card feel */
+body {
+  background: #f4f6f8;
+}
