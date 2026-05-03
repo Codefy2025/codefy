@@ -17,7 +17,7 @@ async function loadPage() {
     }
 
     document.getElementById("title").textContent = data.title;
-    document.getElementById("content").textContent = data.content;
+    document.getElementById("content").innerHTML = data.content;
     document.getElementById("page-title").textContent = data.title;
 
   } catch (err) {
