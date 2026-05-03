@@ -75,3 +75,12 @@ img {
 body {
   background: #f4f6f8;
 }
+
+#content a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+#content a:hover {
+  text-decoration: underline;
+}
