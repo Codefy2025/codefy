@@ -2,7 +2,7 @@ const API_BASE = "https://sparkling-shape-65b4.niklasjuulrasmussen7.workers.dev/
 
 function getUID() {
   const params = new URLSearchParams(window.location.search);
-  return params.get("uid") || "home"; // default page
+  return params.get("uid") || "home";
 }
 
 async function loadPage() {
@@ -12,13 +12,23 @@ async function loadPage() {
     const res = await fetch(`${API_BASE}?uid=${uid}`);
     const data = await res.json();
 
-    if (data.error) {
-      throw new Error(data.error);
-    }
+    // 🔹 existing elements
+    const titleEl = document.getElementById("title");
+    const contentEl = document.getElementById("content");
+    const imgEl = document.getElementById("image");
 
-    document.getElementById("title").textContent = data.title;
-    document.getElementById("content").innerHTML = data.content;
-    document.getElementById("page-title").textContent = data.title;
+    // 🔹 text content
+    titleEl.textContent = data.title;
+    contentEl.innerHTML = data.content;
+
+    // 🖼️ 👉 ADD IMAGE LOGIC HERE
+    if (data.image) {
+      imgEl.src = data.image;
+      imgEl.alt = data.imageAlt || "";
+      imgEl.style.display = "block";
+    } else {
+      imgEl.style.display = "none";
+    }
 
   } catch (err) {
     document.getElementById("title").textContent = "Error";
