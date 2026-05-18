@@ -1,8 +1,9 @@
 function getUID() {
 
-  const parts = window.location.pathname.split("/");
+  const params =
+    new URLSearchParams(window.location.search);
 
-  return parts[2];
+  return params.get("uid");
 }
 
 async function loadProject() {
@@ -15,14 +16,16 @@ async function loadProject() {
 
   const data = await res.json();
 
-  const container = document.getElementById("project");
+  const container =
+    document.getElementById("project");
 
   container.innerHTML = `
     <h1>${data.title}</h1>
 
-    ${data.image
-      ? `<img src="${data.image}" alt="">`
-      : ""
+    ${
+      data.image
+        ? `<img src="${data.image}" style="max-width:100%;">`
+        : ""
     }
 
     <div>${data.content}</div>
