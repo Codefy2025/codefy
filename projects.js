@@ -16,13 +16,12 @@ async function loadProjects() {
     const item =
       document.createElement("div");
 
-    item.innerHTML = `
-      <a href="/project.html?uid=${project.uid}">
-        ${
-          project.image
-            ? `<img src="${project.image}" style="max-width:300px;">`
-            : ""
-        }
+item.innerHTML = `
+  <a href="/project.html?uid=${project.uid}">
+    ${project.image ? `<img src="${project.image}">` : ""}
+    <h2>${project.title}</h2>
+  </a>
+`;
 
         <h2>${project.title}</h2>
       </a>
