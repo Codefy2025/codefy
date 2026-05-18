@@ -17,7 +17,7 @@ async function loadProjects() {
       document.createElement("div");
 
 item.innerHTML = `
-  <a href="/project.html?uid=${project.uid}">
+  <a href="/projects.html?uid=${project.uid}">
     ${project.image ? `<img src="${project.image}">` : ""}
     <h2>${project.title}</h2>
   </a>
