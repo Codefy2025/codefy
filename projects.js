@@ -17,15 +17,11 @@ async function loadProjects() {
       document.createElement("div");
 
 item.innerHTML = `
-  <a href="/projects.html?uid=${project.uid}">
-    ${project.image ? `<img src="${project.image}">` : ""}
+  <a href="project.html?uid=${project.uid}">
+    ${project.image ? `<img src="${project.image}" style="max-width:300px;">` : ""}
     <h2>${project.title}</h2>
   </a>
 `;
-
-        <h2>${project.title}</h2>
-      </a>
-    `;
 
     container.appendChild(item);
   });
